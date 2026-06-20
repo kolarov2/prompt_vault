@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --paper: #f7f6f2;
+}
+
+body {
+  background-color: #f7f6f2;
+  color: #1b1b18;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-mono {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+}
+
+.receipt-tear {
+  position: relative;
+}
+.receipt-tear::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-image: radial-gradient(circle, #d8d5cc 1.5px, transparent 1.6px);
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+}
+
+.stamp {
+  transform: rotate(-4deg);
+  border: 2px solid currentColor;
+  display: inline-block;
+}
